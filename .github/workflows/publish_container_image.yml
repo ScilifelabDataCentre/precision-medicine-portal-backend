@@ -2,7 +2,7 @@ name: Build and push socket-activate-echo container image
 on:
   push:
     tags:
-      - 'test'
+      - 'test*'
 jobs:
   build_push_container:
     runs-on: ubuntu-latest

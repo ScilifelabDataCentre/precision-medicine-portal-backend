@@ -2,7 +2,7 @@ name: Build and push precision medicine portal container image
 on:
   push:
     tags:
-      - 'test*'
+      - 'v*.*.*'
 jobs:
   build_push_container:
     runs-on: ubuntu-latest

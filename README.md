@@ -131,4 +131,4 @@ If in doubt, you can ask for help by emailing [datacentre@scilifelab.se](mailto:
 
 ## Credits
 
-The website was built by the DDLS Precision Medicine Data Science Node with colleagues at SciLifeLab.
+The portal was built by the DDLS Precision Medicine Data Science Node with colleagues at SciLifeLab.

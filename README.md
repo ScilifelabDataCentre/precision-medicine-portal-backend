@@ -99,12 +99,14 @@ git add my_changed_file
 
 You can then commit and push to your branch:
 
+(NOTE: DO NOT FORGET TO SIGN YOUR COMMITS, by policy only signed commits can be merged into the main branches.)
+
 ```bash
-git commit -m "My commit"
+git commit -S -m "My commit"
 git push origin my_branch
 ```
 
-The code is now in my_branch in the repository, but you it does not get merged into the any other branch without being reviewed as a pull request.
+The code is now in my_branch in the repository, but you it does not get merged into the main branches without being reviewed as a pull request.
 
 
 ### Step 3: Make a pull request
@@ -114,10 +116,19 @@ Once you're finished with your edits and they are committed and pushed to your b
 You can find full documentation on the [GitHub help website](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests), however in short:
 
 - Visit the main repository: [https://github.com/ScilifelabDataCentre/data.scilifelab.se](https://github.com/ScilifelabDataCentre/data.scilifelab.se)
+- Find the branch my_branch that you created and pushed to
 - Click the button that reads _"New Pull Request"_
--
--
--
+- Add/change title as well as a description of what you've done
+- Add reviewers from the organization to review your pull request
+- Click Create Pull Request
 
 Once created, a member of the website team will review your changes.
 Once approved, they will be merged and deployed.
+
+## How to get help
+
+If in doubt, you can ask for help by emailing [datacentre@scilifelab.se](mailto:datacentre@scilifelab.se).
+
+## Credits
+
+The portal was built by the DDLS Precision Medicine Data Science Node with colleagues at SciLifeLab.

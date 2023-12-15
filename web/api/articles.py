@@ -21,10 +21,10 @@ def get_random_article():
         article_names = list(stored_articles.keys())
         shuffle(article_names)
         db.close()
-    file_as_string = get_markdown_file_from_server(stored_articles[article_names[0]])
-    html_content = markdown.markdown(file_as_string)
-    return Markup(html_content), 200
-    #return stored_articles, 200
+    #file_as_string = get_markdown_file_from_server(stored_articles[article_names[0]])
+    #html_content = markdown.markdown(file_as_string)
+    #return Markup(html_content), 200
+    return stored_articles, 200
 
 
 #################### 

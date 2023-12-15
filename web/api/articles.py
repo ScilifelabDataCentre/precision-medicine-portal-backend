@@ -21,10 +21,10 @@ def get_random_article():
         article_names = list(stored_articles.keys())
         shuffle(article_names)
         db.close()
-    #file_as_string = get_markdown_file_from_server(stored_articles[article_names[0]])
-    #html_content = markdown.markdown(file_as_string)
-    #return Markup(html_content), 200
-    return stored_articles, 200
+    file_as_string = get_markdown_file_from_server(stored_articles[article_names[0]])
+    html_content = markdown.markdown(file_as_string)
+    return Markup(html_content), 200
+    #return stored_articles, 200
 
 
 #################### 
@@ -45,13 +45,13 @@ def post_new_article():
     return jsonify({'article name': f'{article_title}', 'article_path': f'{article_url}'}), 200
 
 def write_to_db(article_title, article_url):
-    with open('dummy_files/markdown_example.md', 'r') as db:
+    with open('dummy_files/database.json', 'r') as db:
         stored_articles = json.load(db)
         stored_articles[article_title] = article_url
-        with open('dummy_files/markdown_example.md', 'w') as file:
+        with open('dummy_files/database.json', 'w') as file:
             json.dump(stored_articles, file, indent=4)
             file.close()
-    file.close()
+    db.close()
 
 
 def upload_markdown_to_storage():
@@ -59,6 +59,9 @@ def upload_markdown_to_storage():
     upload_link = generate_upload_link()
 
 
+#################### 
+# Placeholders for S3 functions
+####################
 
 def generate_upload_link():
     return "upload_link.com"
@@ -67,7 +70,7 @@ def get_markdown_file_from_server(md_file_path):
     # Either send the markdown as text or send a link to the markdown hosted on the storage service.
     with open(md_file_path) as md:
         file_as_string = md.read()
-        time.sleep(4)
+        time.sleep(2)
         md.close()
         return file_as_string
     

@@ -1,0 +1,1 @@
+from utils.article_helpers import generate_url_from_title

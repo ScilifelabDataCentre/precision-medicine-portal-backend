@@ -3,6 +3,7 @@ import os
 from flask import Flask
 from flask_smorest import Api
 from flask_migrate import Migrate
+from flask_cors import CORS
 
 from db import db
 
@@ -10,6 +11,7 @@ from resources.articles import blp as ArticleBlueprint
 
 def create_app(db_url=None):
     app = Flask(__name__)
+    CORS(app, origins=["*"])
 
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = "Precision Medicine Portal REST API"

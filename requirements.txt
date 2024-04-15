@@ -4,3 +4,4 @@ python-dotenv
 sqlalchemy
 flask-sqlalchemy
 flask-migrate
+flask_cors

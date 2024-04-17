@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 
 from flask import Flask
 from flask_smorest import Api
@@ -10,8 +11,10 @@ from db import db
 from resources.articles import blp as ArticleBlueprint
 
 def create_app(db_url=None):
+    load_dotenv(override=True)
+
     app = Flask(__name__)
-    CORS(app, origins=["*"])
+    CORS(app, origins=[os.getenv("FRONTEND_URL")])
 
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = "Precision Medicine Portal REST API"

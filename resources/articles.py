@@ -7,24 +7,28 @@ from models import ArticleModel
 from schemas import ArticleGetSchema, PlainArticleSchema, ArticleUpdateSchema
 
 from utils import generate_url_from_title
+from security import api_key_required
 
 
 blp = Blueprint("Articles", __name__, description="Operations on articles")
 
 @blp.route("/article/<string:article_id>")
 class Article(MethodView):
+    @api_key_required
     @blp.response(200, ArticleGetSchema)
     def get(self, article_id):
         # from flask sql-alchemy, automatically aborts if not found
         article = ArticleModel.query.get_or_404(article_id)
         return article
 
+    @api_key_required
     def delete(self, article_id):
         article = ArticleModel.query.get_or_404(article_id)
         db.session.delete(article)
         db.session.commit()
         return {"message": "Article deleted."}
 
+    @api_key_required
     @blp.arguments(ArticleUpdateSchema)
     @blp.response(200, ArticleGetSchema)
     def put(self, article_data, article_id):
@@ -47,10 +51,12 @@ class Article(MethodView):
 
 @blp.route("/article")
 class ArticleList(MethodView):
+    @api_key_required
     @blp.response(200, ArticleGetSchema(many=True))
     def get(self):
         return ArticleModel.query.all()
     
+    @api_key_required
     @blp.arguments(PlainArticleSchema)
     @blp.response(201, ArticleGetSchema)
     def post(self, article_data):

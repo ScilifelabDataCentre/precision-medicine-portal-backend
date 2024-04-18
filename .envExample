@@ -1,0 +1,6 @@
+# example showing which variables are set in .env or a kubernetes ConfigMap
+# needs to be set for apps to run correctly
+FRONTEND_URL = ""
+# The request header from the frontend will contain an 'X-api-key' which 
+# must match with this key to allow API operations
+API_KEY = ""

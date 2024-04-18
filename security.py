@@ -11,11 +11,6 @@ def api_key_required(func):
     @functools.wraps(func)
     def decorator(*args, **kwargs):
         api_key = request.headers.get("x-api-key")
-        print("headers: ")
-        for item in list(request.headers):
-            print(item)
-        print("api_key: ")
-        print(api_key)
         if not api_key:
             abort(
                 400, 

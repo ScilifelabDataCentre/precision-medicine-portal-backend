@@ -132,3 +132,9 @@ If in doubt, you can ask for help by emailing [datacentre@scilifelab.se](mailto:
 ## Credits
 
 The portal was built by the DDLS Precision Medicine Data Science Node with colleagues at SciLifeLab.
+
+# License
+
+This project is licensed under the terms of the MIT license.
+
+Copyright &copy; 2025 SciLifeLab Data Centre

@@ -1,0 +1,23 @@
+cff-version: 1.2.2
+message: "If you use or reuse this software, please cite it using the following metadata."
+authors:
+  - family-names: "Lorenz"
+    given-names: "Jan"
+    orcid: 0009-0004-1933-6281
+  - family-names: "Lindbom Gunnari"
+    given-names: "Sebastian"
+    orcid: 0000-0000-0000-0000
+  - family-names: "Benzian Olsson"
+    given-names: "Natashia"
+    orcid: 0000-0002-5287-7707
+  - family-names: "Ahlsén"
+    given-names: "Maria"
+    orcid: 0009-0000-4576-4985
+  - family-names: "Rassam"
+    given-names: "Saman"
+    orcid: 0009-0006-0765-9352
+  - family-names: "Rapisarda"
+    given-names: "Stefano"
+    orcid: 0000-0002-6751-6453
+title: "Precision Medicine Portal (Backend)"
+url: "https://github.com/ScilifelabDataCentre/precision-medicine-portal-backend"

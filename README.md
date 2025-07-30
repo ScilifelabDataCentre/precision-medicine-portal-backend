@@ -1,3 +1,5 @@
+**Important: The Backend is currently not used in the portal. It is a work in progress and will be used in the future once features requiring backend functionality are needed.**
+
 # Precision Medicine Portal (Backend)
 
 The Precision Medicine Portal is a national resource developed and maintained by SciLifeLab Data Centre. It is intended to serve as a resource for professionals in the field of precision medicine, and content will be added continuously.
